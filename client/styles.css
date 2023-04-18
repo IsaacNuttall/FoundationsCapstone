@@ -9,8 +9,18 @@
     width: 200px;
   }
 
+  @keyframes political-animation {
+    0% {color: red;}
+    25% {color: lime;}
+    50% {color: blue;}
+    100% {color: yellow;}
+  }
+
   h1 {
-    color: lime;
+    color: red;
+    animation-name: political-animation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
   }
   
   body {

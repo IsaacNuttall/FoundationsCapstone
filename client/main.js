@@ -1,5 +1,4 @@
 const form = document.querySelector('form')
-// const drawBtn = document.querySelector("#draw");
 const choicesDiv = document.querySelector("#choices");
 const democratCandidateDiv = document.querySelector("#democrat-candidate");
 const republicanCandidateDiv = document.querySelector("#republican-candidate");
@@ -307,9 +306,8 @@ const makeDemocratChoiceCard = (democratcandidate) => {
   }
   
   const makeDemocratDisplayCard = (democratcandidate) => {
-    // update a global varibale which hold the entire object which we then pass into
     return `
-          <div class="democratcandidate-card outline">
+          <div id="democratDisplayCard" class="democratcandidate-card outline">
           <img src='${democratcandidate.imageURL}' alt='${democratcandidate.name}'/>
           <h3>${democratcandidate.name}</h3>
           <h4>politicalstrength: ${democratcandidate.politicalstrength}</h4>
@@ -392,49 +390,11 @@ const makeDemocratChoiceCard = (democratcandidate) => {
   }
 
   
-  // const putDemocratCandidateBack = (id) => {
-  //   let index = democratcandidate.findIndex((democratcandidate) => democratcandidate.id === id);
-  //   choices.push(democratcandidate[index]);
-  //   democratcandidate.splice(index, 1);
-  //   renderChoices();
-  //   renderDemocratCandidate();
-  //   electionBtn.classList.add("hide");
-  //   if (democratcandidate.length === 0) {
-  //     democratHeader.classList.add("hide");
-  //   }
-  // }
-
-  // const putRepublicanCandidateBack = (id) => {
-  //   let index = republicancandidate.findIndex((republicancandidate) => republicancandidate.id === id);
-  //   choices.push(republicancandidate[index]);
-  //   republicancandidate.splice(index, 1);
-  //   renderRepublicanChoices();
-  //   renderRepublicanCandidate();
-  //   electionBtn.classList.add("hide");
-  //   if (republicancandidate.length === 0) {
-  //     republicanHeader.classList.add("hide");
-  //   }
-  // }
-  
-  // const drawFive = () => {
-  //   axios.get("/api/politicians/shuffled").then((res) => {
-  //     const shuffledPoliticians = res.data;
-  //     choices = shuffledPoliticians.slice(0, 5);
-  //     republicancandidate = shuffledPoliticians.slice(6, 8);
-  
-  //     renderChoices();
-  
-  //     electionBtn.classList.add("hide");
-  //   });
-  // }
-  
   const Election = () => {
     resultsText.textContent = "Election...";
     electionBtn.classList.add("hide");
     choicesDiv.innerHTML = "";
     chooseHeader.classList.add("hide");
-    // renderDemocratCandidate();
-    // renderRepublicanCandidate();
     document
       .querySelectorAll(".democrat-candidate-btn", ".republican-candidate-btn")
       .forEach((btn) => btn.classList.add("hide"))
@@ -444,8 +404,7 @@ const makeDemocratChoiceCard = (democratcandidate) => {
         playAgainBtn.classList.remove("hide");
         getElectionStats();
         console.log(data)
-        // FIXME : create card displaying who won:
-        
+
       });
     }, 1500);
   } 
@@ -456,31 +415,18 @@ const makeDemocratChoiceCard = (democratcandidate) => {
     republicancandidate = [];
     democratcandidate = [];
     playAgainBtn.classList.add("hide");
-    renderChoices();
-    renderRepublicanCandidate();
-    renderDemocratCandidate();
-    // drawBtn.classList.remove("hide");
+    location.reload()
     republicanHeader.classList.add("hide");
     democratHeader.classList.add("hide");
   }
   
   const getElectionStats = () => {
     axios.get(`${baseURL}/getelectionstats`).then(({ data: { democratwin, republicanwin} }) => {
-      democratwinText.textContent = `democratWins: ${democratwin}`;
-      republicanwinText.textContent = `republicanWins: ${republicanwin}`;
+      // democratwinText.textContent = `democratWins: ${democratwin}`;
+      // republicanwinText.textContent = `republicanWins: ${republicanwin}`;
     });
   }
   
-
-
-// drawBtn.addEventListener("click", () => {
-//   if(chosenrepublican && chosendemocrat){
-//   chooseDemocratCandidate(chosendemocrat)
-//   chooseRepublicanCandidate(chosenrepublican)
-//   } else {
-//     alert('You must choose a republican and a democrat')
-//   }
-// });
 electionBtn.addEventListener("click", Election);
 playAgainBtn.addEventListener("click", reset);
 
