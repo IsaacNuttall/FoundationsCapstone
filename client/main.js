@@ -1,4 +1,5 @@
-const form = document.querySelector('form')
+const demForm = document.querySelector('#demForm')
+const repForm = document.querySelector('#repForm')
 const choicesDiv = document.querySelector("#choices");
 const democratCandidateDiv = document.querySelector("#democrat-candidate");
 const republicanCandidateDiv = document.querySelector("#republican-candidate");
@@ -222,7 +223,7 @@ const createRepublicanPoliticianCard = (republicanpolitician) => {
   republicanpoliticiansContainer.appendChild(republicanpoliticianCard)
 }
 
-form.addEventListener('submit', submitRepublicanHandler)
+repForm.addEventListener('submit', submitRepublicanHandler)
 
 getAllRepublicanPoliticians() 
 
@@ -254,7 +255,7 @@ const createDemocratPoliticianCard = (democratpolitician) => {
     democratpoliticiansContainer.appendChild(democratpoliticianCard)
 }
 
-form.addEventListener('submit', submitDemocratHandler)
+demForm.addEventListener('submit', submitDemocratHandler)
 
 getAllDemocratPoliticians() 
 

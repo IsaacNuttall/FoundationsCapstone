@@ -178,4 +178,3 @@ Election: (req, res) => {
   
 }
 
-
