@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "name": "Joe Biden",
+      "politicalstrength": 7,
+      "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kamala Harris",
+      "politicalstrength": 5,
+      "imageURL" : "https://www.whitehouse.gov/wp-content/uploads/2021/04/V20210305LJ-0043.jpg"
+    }
+  ]

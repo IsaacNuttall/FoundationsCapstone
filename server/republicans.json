@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Donald Trump",
+        "politicalstrength": 6,
+        "imageURL" : "https://assets.editorial.aetnd.com/uploads/2016/11/donald-trump-gettyimages-687193180.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ron DeSantis",
+      "politicalstrength": 8,
+      "imageURL" : "https://www.liberty.edu/news/wp-content/uploads/sites/137/govdesantis-feature.jpg"
+    }
+  ]

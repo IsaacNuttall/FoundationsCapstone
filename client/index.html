@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partisan Presidential Wars</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Partisan Presidential Wars</h1>
+    </header>
+
+    <hr/>
+
+    <h2 id="democratwins"></h2>
+    <h2 id="republicanwins"></h2>
+
+    <hr/>
+
+    <main>
+        <div id = "inputforms">
+<div id="adddemocratpoliticians">
+    <form>
+        <input class = 'name'
+            type='text'
+            id="democratname"
+            placeholder="What's the democrat politician's name?"/>
+        <input class = 'politicalstrength'
+            type='text'
+            id="democratpoliticalstrength"
+            placeholder='What is their political strength?'/>
+        <input class = 'imgURL'
+            type='text'
+            id="democratimg"
+            placeholder='Paste an image URL'/>
+        <button>add politician</button>
+    </form>
+</div>
+
+<div id="addrepublicanpoliticians">
+    <form id="repForm">
+        <input class = 'name'
+            type='text'
+            id="republicanname"
+            placeholder="What's the republican politician's name?"/>
+        <input class = 'politicalstrength'
+            type='text'
+            id="republicanpoliticalstrength"
+            placeholder='What is their political strength?'/>
+        <input class = 'imgURL'
+            type='text'
+            id="republicanimg"
+            placeholder='Paste an image URL'/>
+        <button>add politician</button>
+    </form>
+
+
+</div>
+
+</div>
+
+<div id="politicians">
+    <section id="democrat-politicians-container"></section>
+
+    <section id="republican-politicians-container"></section>
+
+</div>
+
+    </main>
+
+
+
+    <section>\
+        <h2 id="choose-header">Choose 2!</h2>
+        <div id="choices" class="container"></div>
+    </section>
+
+    <h2 id="results"></h2>
+
+    <section class="container">
+        <section>
+            <h2 id="democrat-candidate-header">Democrat Candidate:</h2>
+            <div id="democrat-candidate" class="container"></div>
+        </section>
+        <section>
+            <h2 id="republican-candidate-header">Republican Candidate:</h2>
+            <div id="republican-candidate" class="container"></div>
+        </section>
+    </section>
+<div id="electionbuttons">
+    <button id="election">ELECTION!</button>
+
+    <button id="play-again">Play again!</button>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
