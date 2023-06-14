@@ -13,7 +13,7 @@ const democratHeader = document.querySelector("#democrat-candidate-header");
 const republicanHeader = document.querySelector("#republican-candidate-header");
 
 
-const baseURL = `http://localhost:5505/api`
+const baseURL = `http://ec2-3-101-88-82.us-west-1.compute.amazonaws.com/api`
 
 let currRepObj = {}
 let currDemObj = {}
