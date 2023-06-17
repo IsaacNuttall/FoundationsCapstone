@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(express.static(`${__dirname}/client`))
+app.use(express.static(`${__dirname}/../client`))
 
 app.use(express.json())
 app.use(cors())
